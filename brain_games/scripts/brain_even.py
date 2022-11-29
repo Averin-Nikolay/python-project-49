@@ -13,7 +13,6 @@ def main():
         num = randint(1, 100)
         if num % 2 == 0:
             res = 'yes'
-            # i += 1
         else:
             res = 'no'
         print(f'Question: {num}')
