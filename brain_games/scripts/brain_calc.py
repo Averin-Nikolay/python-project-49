@@ -8,7 +8,10 @@ game_name = 'brain-calc'
 game_rule = 'What is the result of the expression?'
 name = ''
 
+
 def game_script():
+    main_script.main_intro(game_name, game_rule)
+    name = main_script.name
     i = 0
     while i < 3:
         num1 = randint(1, 100)
@@ -37,6 +40,4 @@ def game_script():
 
 
 if __name__ == '__main__':
-    main_script.main_intro(game_name, game_rule)
-    name = main_script.name
     game_script()

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import prompt
-import math
 from brain_games.scripts import main_script
 from random import randint
 
@@ -9,6 +8,8 @@ game_rule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def game_script():
+    main_script.main_intro(game_name, game_rule)
+    name = main_script.name
     i = 0
     while i < 3:
         divs = []
@@ -17,12 +18,10 @@ def game_script():
             if number % n == 0:
                 divs.append(n)
         if len(divs) > 2:
-            print(len(divs))
-            print(divs)
             res = "no"
         else:
             res = "yes"
-        print(number)
+        print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
         if answer != res:
             print(
@@ -35,11 +34,6 @@ def game_script():
     if i == 3:
         print(f'Congratulations, {name}!')
 
+
 if __name__ == '__main__':
-    main_script.main_intro(game_name, game_rule)
-    name = main_script.name
     game_script()
-
-
-
-
