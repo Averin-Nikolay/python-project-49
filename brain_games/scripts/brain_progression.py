@@ -13,20 +13,23 @@ def game_script():
     name = main_script.name
     i = 0
     while i < 3:
-        progression = []
+        progression = ''
+        res = ''
         lenght = randint(6, 10)
         start = randint(1, 50)
         offset = randint(1, 10)
         hiden_number = randint(1, lenght - 1)
-        progression.append(start)
+        progression = str(start)
         for n in range(1, lenght):
             cur_value = start + n * offset
-            progression.append(cur_value)
-        res = progression[hiden_number]
-        progression[hiden_number] = ".."
+            if n != hiden_number:
+                progression += ' ' + str(cur_value)
+            else:
+                progression += ' ..'
+                res = str(cur_value)
         print(f'Question: {progression}')
         answer = prompt.string('Your answer: ')
-        if int(answer) == res:
+        if answer == res:
             print('Correct!')
             i += 1
         else:
