@@ -27,6 +27,7 @@ def game_script():
             print(
                 f"'{answer}' is wrong answer ;(. Correct answer "
                 f"was '{res}'.\nLet's try again, {name}! ")
+            break
         else:
             print('Correct!')
             i += 1

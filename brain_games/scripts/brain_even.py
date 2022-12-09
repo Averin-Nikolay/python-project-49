@@ -24,12 +24,12 @@ def main():
                 f"'{answer}' is wrong answer ;(. Correct answer "
                 f"was '{res}'.\nLet's try again, {name}! "
             )
+            break
         else:
             print('Correct!')
             i = i + 1
         if i == 3:
             print(f'Congratulations, {name}!')
-            break
 
 
 if __name__ == '__main__':
