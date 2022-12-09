@@ -12,15 +12,15 @@ def game_script():
     name = main_script.name
     i = 0
     while i < 3:
-        divs = []
+        res = 'yes'
+        divs = 0
         number = randint(1, 100)
         for n in range(1, number - 1):
-            if number % n == 0:
-                divs.append(n)
-        if len(divs) > 2:
-            res = "no"
-        else:
-            res = "yes"
+            if number % n == 0 and divs > 2:
+                res = 'no'
+            else:
+                divs += 1
+        print(res)
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
         if answer != res:
@@ -31,7 +31,6 @@ def game_script():
         else:
             print('Correct!')
             i += 1
-
     if i == 3:
         print(f'Congratulations, {name}!')
 

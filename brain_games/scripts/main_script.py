@@ -1,7 +1,6 @@
 import prompt
 game_name = ''
 game_rule = ''
-name = ''
 
 
 def main_intro(game_name, game_rule):

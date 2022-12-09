@@ -11,6 +11,8 @@ game_rule = 'Find the greatest common divisor of given numbers.'
 
 # An additional script (out of rules)
 def cheat_gcd():
+    main_script.main_intro(game_name, game_rule)
+    name = main_script.name
     i = 0
     while i < 3:
         num_1 = randint(0, 100)
@@ -29,9 +31,7 @@ def cheat_gcd():
     if i == 3:
         print(f'Congratulations, {name}!')
 # if __name__ = '__main__':
-# main_script.main_intro(game_name, game_rule)
-# name = main_script.name
-# cheat_gcd()
+#   cheat_gcd()
 
 
 def game_script():
