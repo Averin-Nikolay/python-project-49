@@ -14,7 +14,7 @@ def game_script():
     i = 0
     while i < 3:
         progression = []
-        lenght = randint(5, 10)
+        lenght = randint(6, 10)
         start = randint(1, 50)
         offset = randint(1, 10)
         hiden_number = randint(1, lenght - 1)
