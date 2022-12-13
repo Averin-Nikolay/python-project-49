@@ -1,4 +1,6 @@
 import prompt
+from brain_games.scripts import main_script
+from random import randint
 game_name = ''
 game_rule = ''
 
@@ -11,11 +13,6 @@ def main_intro(game_name, game_rule):
     print(f'Hello, {name}!')
     print(game_rule)
     return name
-
-
-import prompt
-from brain_games.scripts import main_script
-from random import randint
 
 
 game_name = 'brain-progression'
@@ -65,7 +62,6 @@ def checker(answer, res, i):
         print('Correct!')
         i += 1
     return i
-
 
 
 if __name__ == '__main__':

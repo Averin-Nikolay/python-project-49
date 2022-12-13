@@ -20,13 +20,11 @@ def game_script():
                 res = 'no'
             else:
                 divs += 1
-        print(res)
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
         i = main_script.checker(answer, res, i)
     if i == 3:
         print(f'Congratulations, {name}!')
-
 
 
 if __name__ == '__main__':
