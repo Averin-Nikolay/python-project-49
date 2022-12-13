@@ -11,7 +11,7 @@ def game_script():
     main_script.main_intro(game_name, game_rule)
     name = main_script.name
     i = 0
-    while i < 3:
+    while i < 3 and i != 4:
         res = 'yes'
         divs = 0
         number = randint(1, 100)
@@ -23,16 +23,10 @@ def game_script():
         print(res)
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
-        if answer != res:
-            print(
-                f"'{answer}' is wrong answer ;(. Correct answer "
-                f"was '{res}'.\nLet's try again, {name}! ")
-            break
-        else:
-            print('Correct!')
-            i += 1
+        i = main_script.checker(answer, res, i)
     if i == 3:
         print(f'Congratulations, {name}!')
+
 
 
 if __name__ == '__main__':
